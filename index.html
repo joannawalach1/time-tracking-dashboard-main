@@ -13,8 +13,6 @@
     />
     <link rel="stylesheet" type="text/css" href="scss/main.css" />
     <title>Frontend Mentor | Time tracking dashboard</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
       <div class="wrapper">
@@ -25,9 +23,9 @@
             <h2>Jeremy Robson</h2>
           </div>
           <div class="wrapper__menu--bottom">
-            <p>Daily</p>
-            <p>Weekly</p>
-            <p>Monthly</p>
+            <p id="paradaily">Daily</button>
+            <p id="paraweekly">Weekly</p>
+            <p id="paramonthly">Monthly</p>
           </div>
         </div>
         <div class="wrapper__content">
@@ -39,10 +37,11 @@
                   <img class="ellipseicon" src="images/icon-ellipsis.svg" alt="icon" />
                 </div>
                 <div class="card__bottom--secondline">
-                  <h2>32hrs</h2>
+                  <h2 class="printData">32hrs</h2>
                 </div>
                 <div class="thirdline">
-                  <p>Last week - 36hrs</p>
+                  <p>Last week </p>
+                  <p id="lastweek">- 36hrs</p>
                 </div>
                 
                 Work 5hrs
@@ -204,5 +203,7 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Jola</a>.
     </div>
+    <script type="text/json" src="./dist/data.json"></script>
+    <script type="text/javascript" src="./dist/readjson.js"></script>
   </body>
 </html>
