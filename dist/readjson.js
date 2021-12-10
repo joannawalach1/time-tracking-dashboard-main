@@ -1,19 +1,21 @@
-    const linkDaily = document.getElementById("paradaily");
+const linkDaily = document.getElementById("paradaily");
+const hours = document.getElementsByClassName("print-data");
+const lastWeek = document.querySelectorAll("p#lastweek")
 
-    const hours = document.getElementsByClassName('printData');
-    const lastWeek = document.getElementById("lastweek");
+fetch('./dist/data.json')
+    .then((response) => {
+        return response.json()
+    })
+    .then((data) => {
+        console.log(data)
+    })
 
-    function getData() {
-        fetch('./dist/data.json')
-        .then(response => response.json())
-        .then(data => {
-            hours.forEach((element, i) => {
-                hours[i].innerText = data[i].timeframes.daily.current + 'hrs';
-                lastWeek[i].innerText = data[i].timeframes.daily.previous + 'hrs';
-            })
-        })
-}
+    .catch ((err) => {
+    // Do something for an error here
+})
 
-linkDaily.addEventListener('click', getData());
-   
-    
+linkDaily.addEventListener("click", (data) => {
+    for (let i = 0; i < hours.length; i++) {
+        console.log(i); 
+        hours[i].innerHTML = data[i].timeframes.daily.current; 
+    }})
