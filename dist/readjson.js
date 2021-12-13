@@ -4,7 +4,7 @@ const linkMonthly = document.getElementById("paramonthly");
 const hours = document.getElementsByClassName("print-data");
 const lastWeek = document.getElementsByClassName("lastweek");
 
-function getDailyDates(click) {
+function getDailyDates(link) {
     for (let i = 0; i < hours.length; i++) {
         fetch('./dist/data.json')
             .then((response) => {
@@ -23,7 +23,7 @@ function getDailyDates(click) {
     }
 }
 
-function getWeeklyDates(click) {
+function getWeeklyDates(link) {
     for (let i = 0; i < hours.length; i++) {
         fetch('./dist/data.json')
             .then((response) => {
@@ -42,7 +42,7 @@ function getWeeklyDates(click) {
     }
 }
 
-function getMonthlyDates(click) {
+function getMonthlyDates(link) {
     for (let i = 0; i < hours.length; i++) {
         fetch('./dist/data.json')
             .then((response) => {
@@ -61,18 +61,17 @@ function getMonthlyDates(click) {
     }
 }
 
-switchDates("daily");
-
-function switchDates(click) {
-if (click==="daily") {
+function switchDates(link) {
+if (link == "daily") {
 linkDaily.addEventListener("click", getDailyDates("daily"));
 console.log("daily");
-} else if (click==="weekly") {
+} else if (link == "weekly") {
 linkWeekly.addEventListener("click", getWeeklyDates("weekly"));
 console.log("weekly");
-} else if (click==="monthly") {
+} else if (link == "monthly") {
 linkMonthly.addEventListener("click", getMonthlyDates("monthly"));
 console.log("monthly");
+} 
 }
 
-}
+switchDates("monthly");
