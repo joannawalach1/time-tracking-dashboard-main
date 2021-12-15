@@ -2,6 +2,7 @@ const linkDaily = document.getElementById("paradaily");
 const linkWeekly = document.getElementById("paraweekly");
 const linkMonthly = document.getElementById("paramonthly");
 const hours = document.getElementsByClassName("print-data");
+const dynamicText = document.getElementById("textbox");
 const lastWeek = document.getElementsByClassName("lastweek");
 
 linkDaily.addEventListener("click", function getDailyDates() {
@@ -11,7 +12,7 @@ linkDaily.addEventListener("click", function getDailyDates() {
                 return response.json()
             })
             .then((data) => {
-                console.log(i);
+                dynamicText.textContent = "yesterday";
                 hours[i].textContent = data[i].timeframes.daily.current + ' hrs';
                 lastWeek[i].textContent = data[i].timeframes.daily.previous + ' hrs';
             })
@@ -29,6 +30,7 @@ linkWeekly.addEventListener("click", function getWeeklyDates() {
                 return response.json()
             })
             .then((data) => {
+                dynamicText.textContent = "last week";
                 hours[i].textContent = data[i].timeframes.weekly.current + ' hrs';
                 lastWeek[i].textContent = data[i].timeframes.weekly.previous + ' hrs';
             })
@@ -46,6 +48,7 @@ linkMonthly.addEventListener("click", function getMonthlyDates() {
                 return response.json()
             })
             .then((data) => {
+                dynamicText.textContent = "last month";
                 hours[i].textContent = data[i].timeframes.monthly.current + ' hrs';
                 lastWeek[i].textContent = data[i].timeframes.monthly.previous + ' hrs';
             })

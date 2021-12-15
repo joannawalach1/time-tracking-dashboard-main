@@ -157,7 +157,7 @@ body {
 }
 
 
-@media only screen and (max-width: 880px) {
+@media only screen and (max-width: 850px) {
     .wrapper {
         display: flex;
         flex-direction: column;
@@ -192,7 +192,7 @@ body {
     }
 }
  
-@media screen and (max-width: 850x) {
+@media screen and (min-width: 350px) {
     .wrapper {
         display: flex;
         flex-direction: column;
@@ -214,13 +214,6 @@ body {
         align-items: center;
         justify-content: center;
         padding: 0;
-
-    }
-
-    .card {
-        min-width: 280px;
-        align-self: center;
     }
 }
-
 

@@ -178,7 +178,7 @@ body {
   margin-top: 15px;
 }
 
-@media only screen and (max-width: 880px) {
+@media only screen and (max-width: 850px) {
   .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -233,7 +233,7 @@ body {
         align-self: center;
   }
 }
-@media screen and (max-width: 850x) {
+@media screen and (min-width: 350px) {
   .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -272,12 +272,6 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     padding: 0;
-  }
-
-  .card {
-    min-width: 280px;
-    -ms-flex-item-align: center;
-        align-self: center;
   }
 }
 /*# sourceMappingURL=main.css.map */
