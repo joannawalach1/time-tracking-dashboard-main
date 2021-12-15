@@ -23,6 +23,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-top: 10%;
   -ms-flex-line-pack: center;
       align-content: center;
@@ -233,7 +237,7 @@ body {
         align-self: center;
   }
 }
-@media screen and (min-width: 350px) {
+@media screen and (max-width: 600px) {
   .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
