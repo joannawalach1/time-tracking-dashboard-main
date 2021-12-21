@@ -12,7 +12,7 @@ linkDaily.addEventListener("click", function getDailyDates() {
                 return response.json()
             })
             .then((data) => {
-                dynamicText[i].textContent = "yesterday";
+                dynamicText[i].textContent = "Yesterday";
                 hours[i].textContent = data[i].timeframes.daily.current + ' hrs';
                 lastWeek[i].textContent = data[i].timeframes.daily.previous + ' hrs';
             })
@@ -30,7 +30,7 @@ linkWeekly.addEventListener("click", function getWeeklyDates() {
                 return response.json()
             })
             .then((data) => {
-                dynamicText[i].textContent = "last week";
+                dynamicText[i].textContent = "Last week";
                 hours[i].textContent = data[i].timeframes.weekly.current + ' hrs';
                 lastWeek[i].textContent = data[i].timeframes.weekly.previous + ' hrs';
             })
@@ -48,7 +48,7 @@ linkMonthly.addEventListener("click", function getMonthlyDates() {
                 return response.json()
             })
             .then((data) => {
-                dynamicText[i].textContent = "last month";
+                dynamicText[i].textContent = "Last month";
                 hours[i].textContent = data[i].timeframes.monthly.current + ' hrs';
                 lastWeek[i].textContent = data[i].timeframes.monthly.previous + ' hrs';
             })

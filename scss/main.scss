@@ -3,11 +3,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
 
 
-    * {
+* {
         margin: 0;
         padding: 0;
-      }
-
+}
 
 html {
   font-family: "Rubik", sans-serif;
@@ -60,12 +59,20 @@ body {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    min-height: 120px;
+    min-height:10px;
     background-color: colors.$darkblue;
     border-radius: variables.$radius;
     z-index: 5;
     justify-content: space-around;
     padding: 20px;
+    & a {
+      color: white;
+      text-decoration: none;
+    }
+    & a:hover {
+      color: blue;
+      text-decoration: none;
+    }
   }
 }
 
@@ -173,7 +180,7 @@ body {
         width: 280px;
         margin-bottom: 20px;
         &--bottom {
-            align-content: space-around;
+          justify-content: space-around;
         }
     }
 
@@ -183,7 +190,6 @@ body {
         align-items: center;
         justify-content: center;
         padding: 0;
-
     }
 
     .card {
@@ -203,9 +209,14 @@ body {
     .wrapper__menu {
     min-width: 280px;
        display: flex;
-       &--top { 
+       &--top {
            padding-left: 50px;
            margin: 0;
+       }
+       &--bottom {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-around;
        }
     }
 
